@@ -1,8 +1,7 @@
-import Table from "antd/lib/table";
-import "antd/lib/table/style/css";
-
 import React, { Component } from "react";
 import "./App.css";
+import Table from "antd/lib/table";
+import "antd/lib/table/style/css";
 
 class App extends Component {
   myMethod() {
