@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^2.12.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -21,15 +22,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/*.js'",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --trailing-comma es5 --single-quote --write",
-      "git add"
-    ]
+    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"]
   }
 }
