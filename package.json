@@ -28,6 +28,6 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"]
+    "*.js": ["npm run format", "git add"]
   }
 }
