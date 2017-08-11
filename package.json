@@ -25,9 +25,12 @@
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js'",
-    "precommit": "npm run format"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"]
+    "*.{js,jsx}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ]
   }
 }
