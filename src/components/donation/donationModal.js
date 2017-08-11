@@ -15,7 +15,7 @@ class DonationModal extends Component {
   }
 
   editForm(e) {
-    		e.preventDefault()
+   		 e.preventDefault()
     this.setState({
       editMode: true
     });
