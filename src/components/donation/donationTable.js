@@ -1,55 +1,55 @@
-import React, { Component } from "react";
-import Table from "antd/lib/table";
-import Icon from "antd/lib/icon";
-import Card from "antd/lib/card";
-import DonationModal from "./donationModal";
+import React, { Component } from 'react';
+import Table from 'antd/lib/table';
+import Icon from 'antd/lib/icon';
+import Card from 'antd/lib/card';
+import DonationModal from './donationModal';
 
 class DonationTable extends Component {
   state = {
     modalVisible: false,
-    rowDetail: null
+    rowDetail: null,
   };
 
   showRowDetails = (event, rowData) => {
     event.preventDefault();
 
-    	this.setState({
+    this.setState({
       modalVisible: true,
-      rowDetail: rowData
+      rowDetail: rowData,
     });
   };
 
   handleCancel() {
     this.setState({
-      modalVisible: false
+      modalVisible: false,
     });
   }
 
   render() {
     const columns = [
       {
-        title: "Musteri Numarasi",
-        dataIndex: "cif",
-        key: "cif"
+        title: 'Musteri Numarasi',
+        dataIndex: 'cif',
+        key: 'cif',
       },
       {
-        title: "Kurum Adi",
-        dataIndex: "institutionName",
-        key: "institutionName"
+        title: 'Kurum Adi',
+        dataIndex: 'institutionName',
+        key: 'institutionName',
       },
       {
-        title: "Kurum Kisa Adi",
-        dataIndex: "institutionAbbr",
-        key: "institutionAbbr"
+        title: 'Kurum Kisa Adi',
+        dataIndex: 'institutionAbbr',
+        key: 'institutionAbbr',
       },
       {
-        title: "Statu",
-        dataIndex: "status",
-        key: "status"
+        title: 'Statu',
+        dataIndex: 'status',
+        key: 'status',
       },
       {
-        title: "",
-        key: "action",
+        title: '',
+        key: 'action',
         render: (text, record) => {
           return (
             <a
@@ -60,25 +60,25 @@ class DonationTable extends Component {
               <Icon type="file" />
             </a>
           );
-        }
-      }
+        },
+      },
     ];
 
     const dataSource = [
       {
-        key: "1",
-        cif: "123",
-        institutionName: "Lorem Ipsum",
-        institutionAbbr: "Lipsum",
-        status: "Aktif"
+        key: '1',
+        cif: '123',
+        institutionName: 'Lorem Ipsum',
+        institutionAbbr: 'Lipsum',
+        status: 'Aktif',
       },
       {
-        key: "2",
-        cif: "456",
-        institutionName: "Dolor Sit Amet",
-        institutionAbbr: "dsa",
-        status: "Aktif"
-      }
+        key: '2',
+        cif: '456',
+        institutionName: 'Dolor Sit Amet',
+        institutionAbbr: 'dsa',
+        status: 'Aktif',
+      },
     ];
 
     return (
@@ -87,7 +87,7 @@ class DonationTable extends Component {
           dataSource={dataSource}
           columns={columns}
           bordered
-          title={() => "Header (buraya ekle butonu vs gelir)"}
+          title={() => 'Header (buraya ekle butonu vs gelir)'}
         />
 
         {this.state.modalVisible &&

@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Modal from "antd/lib/modal";
-import Button from "antd/lib/button";
-import Row from "antd/lib/row";
-import Col from "antd/lib/col";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Modal from 'antd/lib/modal';
+import Button from 'antd/lib/button';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 
 class DonationModal extends Component {
   constructor(props) {
-    		super(props);
-    this.state = {
+    super(props)
+    		this.state = {
       editMode: false,
-      data: props.data
+      data: props.data,
     };
   }
 
   editForm(e) {
-   		 e.preventDefault()
+    e.preventDefault();
     this.setState({
-      editMode: true
+      editMode: true,
     });
   }
 
@@ -26,7 +26,7 @@ class DonationModal extends Component {
     const value = event.target.value;
 
     this.setState({
-      data: { ...this.state.data, [name]: value }
+      data: { ...this.state.data, [name]: value },
     });
   }
 
@@ -105,7 +105,7 @@ class DonationModal extends Component {
   }
 
   onSave() {
-    console.log("Data to save:", JSON.stringify(this.state.data));
+    console.log('Data to save:', JSON.stringify(this.state.data));
     this.props.onCancel();
   }
 
@@ -121,13 +121,13 @@ class DonationModal extends Component {
         </Button>,
         <Button key="save" size="large" onClick={e => this.onSave()}>
           Kaydet
-        </Button>
+        </Button>,
       ];
     } else {
       return [
         <Button key="cancel" size="large" onClick={this.props.onCancel}>
           Kapat
-        </Button>
+        </Button>,
       ];
     }
   }
@@ -139,7 +139,7 @@ class DonationModal extends Component {
       <div>
         <Modal
           visible={visible}
-          title={editMode ? "Edit" : "View"}
+          title={editMode ? 'Edit' : 'View'}
           onOk={this.handleOk}
           onCancel={this.props.onCancel}
           footer={this.renderFooter()}
@@ -152,11 +152,11 @@ class DonationModal extends Component {
 }
 
 DonationModal.propTypes = {
-  visible: PropTypes.bool
+  visible: PropTypes.bool,
 };
 
 DonationModal.defaultProps = {
-  visible: false
+  visible: false,
 };
 
 export default DonationModal;
