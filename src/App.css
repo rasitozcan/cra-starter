@@ -1,3 +1,14 @@
+@import '~antd/dist/antd.css';
+
+body {
+  background: #ececec;
+  padding: 16px;
+}
+
+.gutter-box {
+  padding-bottom: 16px;
+}
+
 .App {
   text-align: center;
 }
@@ -19,6 +30,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
