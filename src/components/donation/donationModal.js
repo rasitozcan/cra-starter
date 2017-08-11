@@ -7,7 +7,7 @@ import Col from 'antd/lib/col';
 
 class DonationModal extends Component {
   constructor(props) {
-    			super(props);
+    super(props);
     this.state = {
       editMode: false,
       data: props.data,
