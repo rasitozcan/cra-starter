@@ -1,11 +1,11 @@
-import Layout from "antd/lib/layout";
-import Row from "antd/lib/row";
-import Col from "antd/lib/col";
-import Card from "antd/lib/card";
+import Layout from 'antd/lib/layout';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Card from 'antd/lib/card';
 
-import React from "react";
-import DonationTable from "./components/donation/donationTable";
-import "./App.css";
+import React from 'react';
+import DonationTable from './components/donation/donationTable';
+import './App.css';
 
 // const { Header, Footer, Sider, Content } = Layout;
 const { Content } = Layout;

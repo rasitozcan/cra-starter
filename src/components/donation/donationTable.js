@@ -13,7 +13,7 @@ class DonationTable extends Component {
   showRowDetails = (event, rowData) => {
     event.preventDefault();
 
-    this.setState({
+    	this.setState({
       modalVisible: true,
       rowDetail: rowData
     });
